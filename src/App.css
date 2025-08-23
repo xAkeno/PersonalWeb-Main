@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+body{
+    background-color: rgb(24, 24, 24);
+    background-image: url('../src/assets/gradient-background-bottom.png'),url('../src/assets/gradient-background-top.png');
+    background-position: center bottom, center top;
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto;
+}
+
+@keyframes appear{
+    from{
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes appear2{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes appearlogo{
+    from{
+        opacity: 0;
+        scale: 0.1;
+    }
+    to{
+        opacity: 1;
+        scale:1;
+    }
+}
+@keyframes appearmes{
+    from{
+        opacity: 0;
+        transform: translateY(200px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
