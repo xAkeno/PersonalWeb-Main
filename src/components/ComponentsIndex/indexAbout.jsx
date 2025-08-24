@@ -1,6 +1,8 @@
 import React from 'react'
 import IndexAboutContainer from './indexAboutContainer'
+import { useNavigate } from 'react-router-dom'
 const indexAbout = () => {
+  const navigate = useNavigate();
   return (
     <div className='h-full flex flex-col gap-3 my-10'>
           <h1 className="text-center text-[rgb(204,202,202)] text-3xl font-['Franklin_Gothic_Medium','Arial_Narrow',Arial,sans-serif]">
@@ -9,7 +11,9 @@ const indexAbout = () => {
           </h1>
         <IndexAboutContainer/>
         <div className="button-project flex justify-center">
-          <button  type="button" class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-4 py-2 text-center me-2 mb-2 cursor-pointer">
+          <button  onClick={() => {
+            navigate("/about"); 
+            window.scrollTo(0, 0);}} type="button" class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-4 py-2 text-center me-2 mb-2 cursor-pointer">
               Know more about me
           </button>
         </div>

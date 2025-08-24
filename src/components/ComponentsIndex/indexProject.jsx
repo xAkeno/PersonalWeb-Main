@@ -2,7 +2,9 @@ import React from 'react'
 import project1 from "../../assets/project1.png"
 import project2 from "../../assets/project2.png"
 import IndexLoadedProject from './indexLoadedProject'
+import { useNavigate } from 'react-router-dom'
 const indexProject = () => {
+    const navigate = useNavigate();
     const friendoName = "Friendo";
     const friendoDes = "Friendo is a social media app built with React, Spring Boot, and WebSocket. It enables real-time communication and represents my growth as a full stack developer."
     const friendoStack = ["Spring Boot","Spring Security","Spring MVC","ReactJS","TailwindCSS","MySQL","Azure","WebSocket","Axios","JWT"];
@@ -22,7 +24,10 @@ const indexProject = () => {
             <IndexLoadedProject name={westName} des={westDes} stack={westStack} img={project2} animate={{ animation: "appear2 0.4s linear" }}/>
         </div>
         <div className="button-project flex justify-center">
-            <button  type="button" class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-4 py-2 text-center me-2 mb-2 cursor-pointer">
+            <button  onClick={() => {
+                navigate("/project")
+                window.scrollTo(0, 0);
+            }} type="button" class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-4 py-2 text-center me-2 mb-2 cursor-pointer">
                 See all projects
             </button>
         </div>

@@ -7,6 +7,14 @@ body{
     background-repeat: no-repeat, no-repeat;
     background-size: auto;
 }
+@keyframes blur{
+    from{
+        filter: blur(50px);
+    }
+    to{
+        filter: blur(0px);
+    }
+}
 
 @keyframes appear{
     from{

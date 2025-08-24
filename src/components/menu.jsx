@@ -19,38 +19,39 @@ const menu = () => {
           onClick={() => navigate("/")}
         />
 
-        <ul className="flex list-none m-0 p-0">
-          <li className="ml-6">
+        <ul className="flex list-none m-0 p-0 gap-6 [&>li]:[&>button]:cursor-pointer [&>li]:[&>button]:hover:text-white [&>li]:[&>button]:text-gray-200" >
+          <li>
             <button
               onClick={() => navigate("/guest")}
-              className="text-white no-underline hover:text-gray-300"
             >
               Guest Book
             </button>
           </li>
-          <li className="ml-6">
+          <li>
             <button
-              onClick={() => navigate("/projects")}
-              className="text-white no-underline hover:text-gray-300"
+              onClick={() => navigate("/project")}
             >
               Projects
             </button>
           </li>
-          <li className="ml-6">
+          <li>
             <button
               onClick={() => navigate("/about")}
-              className="text-white no-underline hover:text-gray-300"
             >
               About
             </button>
           </li>
-          <li className="ml-6">
+          <li>
             <button
               onClick={() => navigate("/uses")}
-              className="text-white no-underline hover:text-gray-300"
             >
               Uses
             </button>
+          </li>
+          <li>
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun-icon lucide-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+            </span>
           </li>
         </ul>
       </nav>
