@@ -1,11 +1,25 @@
 @import "tailwindcss";
+@import "tailwindcss/utilities";
+@custom-variant dark (&:where(.dark, .dark *));
+
+.scroll-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-hidden {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
 
 body{
-    background-color: rgb(24, 24, 24);
+    background-color: rgb(236, 236, 236);
     background-image: url('../src/assets/gradient-background-bottom.png'),url('../src/assets/gradient-background-top.png');
     background-position: center bottom, center top;
     background-repeat: no-repeat, no-repeat;
     background-size: auto;
+}
+.dark body {
+  background-color: rgb(24, 24, 24);
 }
 @keyframes blur{
     from{

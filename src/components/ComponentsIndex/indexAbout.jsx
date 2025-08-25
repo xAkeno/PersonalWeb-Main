@@ -4,8 +4,8 @@ import { useNavigate } from 'react-router-dom'
 const indexAbout = () => {
   const navigate = useNavigate();
   return (
-    <div className='h-full flex flex-col gap-3 my-10'>
-          <h1 className="text-center text-[rgb(204,202,202)] text-3xl font-['Franklin_Gothic_Medium','Arial_Narrow',Arial,sans-serif]">
+    <div className='h-full flex flex-col gap-3 my-10 text-gray-800 dark:text-gray-300'>
+          <h1 className="text-center text-3xl font-['Franklin_Gothic_Medium','Arial_Narrow',Arial,sans-serif]">
               About me
               <hr className='w-[14%] mx-auto border-purple-600 border-2 rounded-t-full shadow-[0_-10px_12px_rgb(155,48,255)]'/>
           </h1>

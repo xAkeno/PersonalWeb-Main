@@ -1,27 +1,38 @@
 import React from 'react'
-
+import AboutLoaded from './aboutLoaded'
+import {aboutStack} from './aboutStack'
 const aboutContent = () => {
 
   return (
-    <div className="center mx-auto flex flex-col gap-8 animate-[appear_0.3s_linear] my-[5rem]">
-    {/* WHO AM I */}
-    <div className="who text-[rgb(207,204,204)]">
-        <h2 className="text-[rgb(194,191,191)] text-2xl mb-2">
+    <div className="center mx-auto flex flex-col gap-8 animate-[appear_0.3s_linear] my-[5rem] text-gray-800 dark:text-gray-300">
+    <div className="who ">
+        <h2 className=" text-2xl mb-2 font-semibold">
         WHO AM I
         </h2>
         <p>
-            I'm an aspiring Java developer but can also do full stack development with
-            React and Spring Boot. I'm 20 and studying at UMAK. I enjoy creating
-            websites using Spring Boot and JavaScript.
+            I'm <b>Clark Kent Raguhos</b>, an aspiring <b>Java developer</b> who can also do full stack development 
+            with <b>React</b> and <b>Spring Boot</b>. I'm 20 years old and currently studying at the <b>University of Makati</b>, 
+            taking a <b>Diploma in Application Development</b>.
         </p>
+    </div>
+    <h1 className='text-4xl text-center text-gray-800 dark:text-gray-300 mt-[2rem]'>Technical Skills</h1>
+    <div className='grid grid-cols-2 gap-2 max-[1200px]:grid-cols-1'>
+        {aboutStack.map((item, i) => (
+          <AboutLoaded
+            key={i}
+            title={item.title}
+            img={item.img}
+            stack={item.stack}
+          />
+        ))}
     </div>
 
     {/* ABOUT */}
-    <div className="about text-[rgb(207,204,204)]">
-        <h2 className="text-[rgb(194,191,191)] text-2xl mb-2">
+    <div className="about">
+        <h2 className=" text-2xl mb-2">
         About this website
         </h2>
-        <ul className="pop text-[rgb(207,204,204)] list-disc pl-6">
+        <ul className="pop list-disc pl-6">
             <li>ReactJs</li>
             <li>TailWindCSS</li>
             <li>JavaScript</li>
@@ -32,10 +43,10 @@ const aboutContent = () => {
     </div>
 
     <div className="link">
-        <h2 className="text-[rgb(194,191,191)] text-2xl mb-2">
+        <h2 className=" text-2xl mb-2">
         Social Link
         </h2>
-        <ul className="list-disc pl-6 text-[rgb(207,204,204)]">
+        <ul className="list-disc pl-6">
         <li>Linkedin</li>
         <li>JobStreet</li>
         <li>GitHub</li>

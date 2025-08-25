@@ -12,7 +12,7 @@ const projectBody = () => {
       
       '>
         {
-            projectdata.map((item,index) => (<IndexLoadedProject name={item.name} des={item.description} img={item.image} stack={item.tech}/>))
+            projectdata.map((item,index) => (<IndexLoadedProject name={item.name} des={item.description} img={item.image} stack={item.tech} link={item.link}/>))
         }
     </div>
   )

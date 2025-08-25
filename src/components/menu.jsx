@@ -1,32 +1,33 @@
 import React from 'react'
-import blackLogo from '../assets/black.png'
+import blackLogo from '../assets/blacklogonoback.png'
+import logonoback from '../assets/logonoback.png'
+import Theme from './theme';
 import { useNavigate } from "react-router-dom";
 const menu = () => {
     const navigate = useNavigate();
   return (
     <nav
         id="menu"
-        className="flex justify-between items-center bg-[#393939] px-[5px] pr-[10px] w-[50%] mx-auto rounded-[10px] border border-[#5c5b5b86] my-5 font-sans shadow-sm shadow-gray-900
+        className="flex justify-between items-center  dark:bg-[#393939]/60  backdrop-blur-2xl px-[5px] pr-[10px] w-[50%] mx-auto rounded-[10px] border border-[#5c5b5b86] my-5 font-sans shadow-sm shadow-gray-900
         max-[1375px]:w-[70%]
-        max-md:w-[80%]
+        max-md:w-[95%]
         "
       >
         {/* Logo goes home */}
         <img
+          src={logonoback}
+          alt="logo"
+          className="h-12 cursor-pointer dark:hidden"
+          onClick={() => navigate("/")}
+        />
+        <img
           src={blackLogo}
           alt="logo"
-          className="h-12 cursor-pointer"
+          className="h-12 cursor-pointer hidden dark:block"
           onClick={() => navigate("/")}
         />
 
-        <ul className="flex list-none m-0 p-0 gap-6 [&>li]:[&>button]:cursor-pointer [&>li]:[&>button]:hover:text-white [&>li]:[&>button]:text-gray-200" >
-          <li>
-            <button
-              onClick={() => navigate("/guest")}
-            >
-              Guest Book
-            </button>
-          </li>
+        <ul className="flex items-center list-none m-0 p-0 gap-6 [&>li]:[&>button]:text-lg [&>li]:[&>button]:font-medium [&>li]:[&>button]:cursor-pointer [&>li]:[&>button]:hover:dark:text-white [&>li]:[&>button]:dark:text-gray-200" >
           <li>
             <button
               onClick={() => navigate("/project")}
@@ -48,10 +49,8 @@ const menu = () => {
               Uses
             </button>
           </li>
-          <li>
-            <span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun-icon lucide-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
-            </span>
+          <li className='flex items-center justify-center'>
+            <Theme/>
           </li>
         </ul>
       </nav>

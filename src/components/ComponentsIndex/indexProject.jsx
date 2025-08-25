@@ -8,20 +8,22 @@ const indexProject = () => {
     const friendoName = "Friendo";
     const friendoDes = "Friendo is a social media app built with React, Spring Boot, and WebSocket. It enables real-time communication and represents my growth as a full stack developer."
     const friendoStack = ["Spring Boot","Spring Security","Spring MVC","ReactJS","TailwindCSS","MySQL","Azure","WebSocket","Axios","JWT"];
+    const friendolink = "https://myfriendo.azurewebsites.net/"
 
     const westName = "West Rembo Announcement Site"
     const westStack = ["PHP","MySQL","HTML","TailWindCSS","Figma","FlowBite"];
     const westDes = "This website shares official announcements, events, and updates for the West Rembo community, serving as an information hub to keep residents connected and informed.";
-  return (
-    <div className='w-full h-full flex flex-col gap-3 mb-10'
+    const westlink = "https://brgywestremboannouncement.great-site.net/";
+    return (
+    <div className='w-full h-full flex flex-col gap-3 mb-10 text-gray-800 dark:text-gray-300'
     >
-        <h1 className="text-center text-[rgb(204,202,202)] text-3xl font-['Franklin_Gothic_Medium','Arial_Narrow',Arial,sans-serif]">
+        <h1 className="text-center text-3xl font-['Franklin_Gothic_Medium','Arial_Narrow',Arial,sans-serif]">
             Selected Projects
             <hr className='w-[25%] mx-auto border-purple-600 border-2 rounded-t-full shadow-[0_-10px_12px_rgb(155,48,255)]'/>
         </h1>
         <div className='w-full h-full flex flex-row max-[600px]:flex-col gap-3'>
-            <IndexLoadedProject name={friendoName} des={friendoDes} stack={friendoStack} img={project1} animate={{ animation: "appear 0.4s linear" }}/>
-            <IndexLoadedProject name={westName} des={westDes} stack={westStack} img={project2} animate={{ animation: "appear2 0.4s linear" }}/>
+            <IndexLoadedProject name={friendoName} des={friendoDes} stack={friendoStack} img={project1} animate={{ animation: "appear 0.4s linear" }} link={friendolink}/>
+            <IndexLoadedProject name={westName} des={westDes} stack={westStack} img={project2} animate={{ animation: "appear2 0.4s linear" }} link={westlink}/>
         </div>
         <div className="button-project flex justify-center">
             <button  onClick={() => {

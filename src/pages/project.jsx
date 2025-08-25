@@ -12,10 +12,10 @@ const project = () => {
       <Banner title={title} des={des}/>
       <ProjectBody/>
       <div className='mx-auto w-[50%] max-[579px]:w-[90%] h-auto
-      max-[1375px]:w-[70%]
-      max-[1175px]:grid-cols-2
-      max-sm:grid-cols-1
-      max-md:w-[95%]'>
+        max-[1375px]:w-[70%]
+        max-[1175px]:grid-cols-2
+        max-sm:grid-cols-1
+        max-md:w-[95%]'>
         <Footer/>
       </div>
     </div>

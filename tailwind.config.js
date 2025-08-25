@@ -1,49 +1,22 @@
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
-  theme: {
-    extend: {
+module.exports = {
+    content: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html","node_modules/flowbite/**/*.js"],
+    darkMode: 'class',
+    theme: {
+      extend: {
         colors: {
-            testred: "#ff0000",
-        }  ,
+          rosepink: '#D4A7A7',
+        },
+      },
       screens: {
-        'max-1275': { 'max': '1275px' },
-        'max-1130': { 'max': '1130px' },
-        'max-1115': { 'max': '1115px' },
-        'max-865': { 'max': '865px' },
-        'max-755': { 'max': '755px' },
-        'max-679': { 'max': '679px' },
-        'max-615': { 'max': '615px' },
-        'max-579': { 'max': '579px' },
-      },
-      keyframes: {
-        appear: {
-          '0%': { opacity: '0', transform: 'translateX(-50px)' },
-          '100%': { opacity: '1', transform: 'translateX(0)' },
-        },
-        appear2: {
-          '0%': { opacity: '0', transform: 'translateX(50px)' },
-          '100%': { opacity: '1', transform: 'translateX(0)' },
-        },
-        appearlogo: {
-          '0%': { opacity: '0', transform: 'scale(0.1)' },
-          '100%': { opacity: '1', transform: 'scale(1)' },
-        },
-        appearmes: {
-          '0%': { opacity: '0', transform: 'translateY(200px)' },
-          '100%': { opacity: '1', transform: 'translateY(0)' },
-        },
-      },
-      animation: {
-        appear: "appear 0.3s linear",
-        appear2: "appear2 0.3s linear",
-        appearlogo: "appearlogo 0.4s linear",
-        appearmes: "appearmes 0.5s linear",
-      },
+        xs: "500px",
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+      }
     },
-  },
-  plugins: [],
-}
+    plugins: [
+      require('tailwind-scrollbar-hide'),
+      require('flowbite/plugin')
+    ],
+  };
