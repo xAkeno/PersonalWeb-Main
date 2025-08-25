@@ -74,7 +74,7 @@ const usesContent = () => {
             >
             PC Hardware
             </h1>
-            <div class="grid grid-cols-5 gap-5">
+            <div class="grid grid-cols-5 max-[1700px]:grid-cols-4 gap-5 max-lg:grid-cols-3 max-sm:grid-cols-2">
             <div
                 class="bg-gray-100 shadow-lg dark:bg-neutral-700 dark:hover:bg-neutral-600 hover:bg-gray-200 rounded-xl h-56 w-44 flex flex-col p-2 text-center  font-sans"
             >
@@ -117,7 +117,7 @@ const usesContent = () => {
             >
             Coding
             </h1>
-            <div class="grid grid-cols-5 gap-5">
+            <div class="grid grid-cols-5 gap-5 max-[1700px]:grid-cols-4 max-lg:grid-cols-3 max-sm:grid-cols-2">
                 <div className="bg-gray-100 shadow-lg dark:bg-neutral-700 dark:hover:bg-neutral-600 hover:bg-gray-200 rounded-xl h-56 w-44 flex flex-col p-2 text-center  font-sans">
                     <img src={vs} alt="Visual Code" className="h-40 w-full mb-2 rounded-xl" />
                     <span>Visual Code</span>
@@ -165,7 +165,7 @@ const usesContent = () => {
             >
             Software
             </h1>
-            <div class="grid grid-cols-5 gap-5">
+            <div class="grid grid-cols-5 gap-5 max-[1700px]:grid-cols-4 max-lg:grid-cols-3 max-sm:grid-cols-2">
                 <div className="bg-gray-100 shadow-lg dark:bg-neutral-700 dark:hover:bg-neutral-600 hover:bg-gray-200 rounded-xl h-56 w-44 flex flex-col p-2 text-center  font-sans">
                     <img src={linux} alt="Linux" className="h-40 w-full mb-2" />
                     <span>Linux (Fedora)</span>

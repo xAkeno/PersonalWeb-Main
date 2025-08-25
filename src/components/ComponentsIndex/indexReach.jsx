@@ -3,7 +3,7 @@ import React from 'react'
 const indexReach = () => {
   return (
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 border border-[#383838] rounded-lg p-5 mb-[10rem] my-10 shadow-lg w-full">
-        <div class="md:flex gap-x-24 clear-left ">
+        <div class="flex max-[915px]:flex-col max-[915px]:gap-5 gap-x-24 clear-left ">
             <div class=" md:mb-0 mb-4">
                 <h2 class="text-black font-manrope text-4xl font-semibold leading-10 mb-5 md:text-left text-center dark:text-white">Get In Touch</h2>
                 <p class=" text-lg font-normal leading-7 mb-7 md:text-left text-center dark:text-[rgb(204,202,202)]">Have a question, a project idea, or just want to say hi? I’d love to hear from you.</p>

@@ -112,7 +112,7 @@ const indexAboutContainer = () => {
                     </span>
                     Tech Stacks
                 </h1>
-                <div className='grid grid-cols-5 max-[755px]:grid-cols-4 gap-5'>
+                <div className='grid grid-cols-5 max-[755px]:grid-cols-4 gap-5 max-[755px]:py-2'>
                     {stack.map(
                     (item, idx) => (
                         <div className="relative inline-block group bg-white p-3 rounded-xl shadow-md">

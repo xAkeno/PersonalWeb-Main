@@ -11,6 +11,7 @@ const menu = () => {
         className="flex justify-between items-center  dark:bg-[#393939]/60  backdrop-blur-2xl px-[5px] pr-[10px] w-[50%] mx-auto rounded-[10px] border border-[#5c5b5b86] my-5 font-sans shadow-sm shadow-gray-900
         max-[1375px]:w-[70%]
         max-md:w-[95%]
+        
         "
       >
         {/* Logo goes home */}
@@ -27,7 +28,14 @@ const menu = () => {
           onClick={() => navigate("/")}
         />
 
-        <ul className="flex items-center list-none m-0 p-0 gap-6 [&>li]:[&>button]:text-lg [&>li]:[&>button]:font-medium [&>li]:[&>button]:cursor-pointer [&>li]:[&>button]:hover:dark:text-white [&>li]:[&>button]:dark:text-gray-200" >
+        <ul className="flex items-center list-none m-0 p-0 gap-6 text-lg max-[450px]:text-sm [&>li]:[&>button]:font-medium [&>li]:[&>button]:cursor-pointer [&>li]:[&>button]:hover:dark:text-white [&>li]:[&>button]:dark:text-gray-200 " >
+          <li>
+            <button
+              onClick={() => navigate("/")}
+            >
+              Home
+            </button>
+          </li>
           <li>
             <button
               onClick={() => navigate("/project")}
